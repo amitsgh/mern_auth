@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .custom-input {
+    @apply mt-3 w-full rounded border border-slate border-opacity-10 bg-secondary p-3 font-poppins text-[12px] outline-0 outline-primary transition-all duration-75 placeholder:text-[11px] placeholder:font-medium placeholder:text-primary placeholder:opacity-60 focus:border-opacity-100 focus:bg-tertiary focus:outline-8;
+  }
+
+  .custom-button {
+    @apply mt-6 flex w-full items-center justify-center rounded bg-primary p-3 font-montserrat text-xs font-semibold tracking-wide text-tertiary transition-all duration-75 active:bg-primary active:opacity-95;
+  }
+
+  .custom-social_button {
+    @apply mt-3 flex w-full items-center justify-center gap-1 rounded border border-slate bg-secondary p-3 font-poppins text-[12px] font-semibold outline-primary transition-all duration-75 focus:border focus:bg-secondary focus:opacity-95 focus:outline-8;
+  }
+
+  .custom-otp_input {
+    @apply flex h-28 w-20 flex-col items-center justify-center rounded-lg border-2 border-slate border-opacity-30 bg-secondary p-3 text-center font-montserrat text-5xl outline-primary transition-all duration-75 placeholder:font-medium placeholder:text-primary placeholder:opacity-30 focus:bg-tertiary focus:shadow-lg focus:outline-8;
+  }
+}
